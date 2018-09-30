@@ -53,7 +53,7 @@ public class WindowDBA {
 		JMenu editMenu = new JMenu("Sort");
 		JMenu aboutMenu = new JMenu("More");
 		
-		JMenuItem connection = new JMenuItem("Connection");
+		JMenuItem refresh = new JMenuItem("Refresh");
 		JMenuItem workOffline = new JMenuItem("Work offline");
 		JMenuItem exit = new JMenuItem("Exit");
 		JMenuItem moreRecent = new JMenuItem("More recent");
@@ -61,7 +61,7 @@ public class WindowDBA {
 		JMenuItem about = new JMenuItem("About");
 		JMenuItem help = new JMenuItem("Help");
 
-		fileMenu.add(connection);
+		fileMenu.add(refresh);
 		fileMenu.add(workOffline);
 		fileMenu.add(exit);
 		editMenu.add(moreRecent);
@@ -88,7 +88,7 @@ public class WindowDBA {
 		// CONFIGURAÇÃO DA TABELA
 		JTable tableContent = new JTable(0,4);
 		DefaultTableModel modelTable = (DefaultTableModel) tableContent.getModel();
-		modelTable.insertRow(0, new String[]{"Data", "Canal", "Origem", "Subject"});
+		modelTable.insertRow(0, new String[]{"Data", "Canal", "Origem", "Subject", "Content"});
 
 		panels.get(3).add(tableContent);
 		
